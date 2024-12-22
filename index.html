@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtração com Valor Inicial (Dupla e Transferência)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .number-list, .results {
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .number-item {
+      background: #f9f9f9;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .number-item input {
+      font-size: 14px;
+      margin-left: 10px;
+      width: 40%;
+    }
+    .number-item button {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Subtração com Valor Inicial (Dupla e Transferência)</h1>
+
+  <!-- Seção 1 -->
+  <h2>Despesas Fixas</h2>
+  <input type="number" id="initialNumber1" placeholder="Salário" />
+  <input type="number" id="numberInput1" placeholder="Despesa" />
+  <input type="text" id="textInput1" placeholder="Digite onde você gastou" />
+  <button onclick="addNumber('1')">Salvar</button>
+  <button onclick="clearData('1')">Limpar Todos</button>
+  <button onclick="calculateSubtraction('1')">Calcular</button>
+  
+  <div class="number-list" id="numberList1">
+    <h3>Gastos:</h3>
+  </div>
+  <div class="results" id="results1">
+    <h3>Resultado:</h3>
+    <p id="subtractionResult1">Resultado: </p>
+  </div>
+
+  <!-- Seção 2 -->
+  <h2>Cartão de Crédito</h2>
+  <input type="number" id="initialNumber2" placeholder="" />
+  <input type="number" id="numberInput2" placeholder="Gasto Cartão de Crédito" />
+  <input type="text" id="textInput2" placeholder="Digite onde você gastou" />
+  <button onclick="addNumber('2')">Salvar</button>
+  <button onclick="clearData('2')">Limpar Todos</button>
+  <button onclick="calculateSubtraction('2')">Calcular</button>
+  
+  <div class="number-list" id="numberList2">
+    <h3>Gastos:</h3>
+  </div>
+  <div class="results" id="results2">
+    <h3>Resultado:</h3>
+    <p id="subtractionResult2">Resultado: </p>
+  </div>
+
+  <script src="subtractionWithText.js"></script>
+</body>
+</html>
